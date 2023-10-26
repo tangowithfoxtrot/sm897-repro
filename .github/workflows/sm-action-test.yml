@@ -28,6 +28,6 @@
             uses: bitwarden/sm-action@30880c0f7cc86223557d254e39bb0a5b2fe20128 # v1.0.1
             with:
               access_token: ${{ secrets.BWS_ACCESS_TOKEN }}
-              server_url: ${{ inputs.env }}
+              base_url: ${{ inputs.env }}
               secrets: |
                   69401592-568d-49dc-869a-afdb01306843 > CLOUD_DATA
