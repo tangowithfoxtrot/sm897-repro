@@ -5,7 +5,7 @@
       workflow_dispatch:
         inputs:    
           env:
-            description: "This input does nothing"
+            description: "Environment to pull secrets from"
             required: true
             type: string
     
