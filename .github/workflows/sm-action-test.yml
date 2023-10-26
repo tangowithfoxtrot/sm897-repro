@@ -1,0 +1,33 @@
+---
+    name: Test Secrets Manager Action
+    
+    on:
+      workflow_dispatch:
+        inputs:    
+          env:
+            description: "This input does nothing"
+            required: true
+            type: string
+    
+    jobs:
+      tests:
+        defaults:
+          run:
+            shell: bash
+
+        strategy:
+          fail-fast: false
+          matrix:
+            os: [ubuntu-18.04, ubuntu-20.04, ubuntu-22.04]
+
+        runs-on: ${{ matrix.os }}
+        name: Tests - ${{ matrix.os }}
+        steps:
+
+          - name: Retrieve secrets
+            uses: bitwarden/sm-action@30880c0f7cc86223557d254e39bb0a5b2fe20128 # v1.0.1
+            with:
+              access_token: ${{ secrets.BWS_ACCESS_TOKEN }}
+              server_url: ${{ inputs.env }}
+              secrets: |
+                  69401592-568d-49dc-869a-afdb01306843 > CLOUD_DATA
