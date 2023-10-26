@@ -30,4 +30,4 @@
               access_token: ${{ secrets.BWS_ACCESS_TOKEN }}
               base_url: ${{ inputs.env }}
               secrets: |
-                  69401592-568d-49dc-869a-afdb01306843 > CLOUD_DATA
+                b4f37a29-a0e0-423e-b283-afbd010ca70a > GIGACHAD
