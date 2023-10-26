@@ -25,7 +25,7 @@
         steps:
 
           - name: Retrieve secrets
-            uses: bitwarden/sm-action@30880c0f7cc86223557d254e39bb0a5b2fe20128 # v1.0.1
+            uses: bitwarden/sm-action@e6f913bdf91089a20db136dc78eb92d7502a4be8 # custom ver
             with:
               access_token: ${{ secrets.BWS_ACCESS_TOKEN }}
               base_url: ${{ inputs.env }}
